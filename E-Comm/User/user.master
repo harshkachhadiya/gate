@@ -1,0 +1,2 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="User_user" %>
+
