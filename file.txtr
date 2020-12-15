@@ -1,0 +1,11 @@
+git add .
+git commit -m ""
+git commit -am ""
+git push
+
+git pull // leva 
+git status // check
+
+
+git config --global user.name "harsh kachhadiya"
+git config --global user.email "harshkachhadiya55@gmail.com"
