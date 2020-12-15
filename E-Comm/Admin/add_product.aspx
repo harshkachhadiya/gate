@@ -31,6 +31,11 @@
         </tr>
 
         <tr>
+            <td>Select Category</td>
+            <td><asp:DropDownList ID="dd" runat="server"></asp:DropDownList></td>
+        </tr>
+
+        <tr>
             <td colspan="2" align="center">
                 <asp:Button ID="b1" runat="server" Text="upload" OnClick="b1_Click"/>
             </td>

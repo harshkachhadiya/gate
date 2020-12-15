@@ -38,7 +38,6 @@ public partial class Admin_adminlogin : System.Web.UI.Page
             l1.Text = "you have entered invalid username or password";
         }
 
-        Response.Write(i);
         con.Close();
     }
 }

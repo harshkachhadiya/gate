@@ -14,6 +14,23 @@ public partial class Admin_add_product : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        dd.Items.Clear();
+        con.Open();
+
+        SqlCommand cmd = con.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "select * from product_category";
+        cmd.ExecuteNonQuery();
+        DataTable dt = new DataTable();
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        da.Fill(dt);
+
+        foreach(DataRow dr in dt.Rows)
+        {
+            dd.Items.Add(dr["product_category"].ToString());
+        }
+
+        con.Close();
     }
 
     protected void b1_Click(object sender, EventArgs e)
@@ -26,7 +43,7 @@ public partial class Admin_add_product : System.Web.UI.Page
         
         SqlCommand cmd = con.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "insert into product values('"+t1.Text+"','"+t2.Text+"',"+t3.Text+","+t4.Text+",'"+b.ToString()+"')";
+        cmd.CommandText = "insert into product values('"+t1.Text+"','"+t2.Text+"',"+t3.Text+","+t4.Text+",'"+b.ToString()+"','"+dd.SelectedItem.ToString()+"')";
         cmd.ExecuteNonQuery();
 
         con.Close();

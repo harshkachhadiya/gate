@@ -4,17 +4,8 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Admin Login</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="logincss/style.css">
-
-    
-    
-    
-    
+    <title>Admin Login</title>   
+        <link rel="stylesheet" href="logincss/style.css">   
   </head>
 
   <body>
