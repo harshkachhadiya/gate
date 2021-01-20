@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 public partial class add_category : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\source\repos\E-Comm\E-Comm\App_Data\Database.mdf;Integrated Security=True");
+    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Acer\source\repos\gate\E-Comm\App_Data\Database.mdf;Integrated Security=True");
 
     protected void Page_Load(object sender, EventArgs e)
     {

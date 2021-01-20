@@ -11,4 +11,30 @@ public partial class User_testing : System.Web.UI.Page
     {
 
     }
+
+    protected void b1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void b2_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void b3_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void b4_Click(object sender, EventArgs e)
+    {
+        string s = Convert.ToString(Request.Cookies["aa"].Value);
+        string[] strArr = s.Split('.');
+        for(int i=0;i<strArr.Length;i++)
+        {
+            Response.Write(strArr[i].ToString());
+            Response.Write("<br>");
+        }
+    }
 }
