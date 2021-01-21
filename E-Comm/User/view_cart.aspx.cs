@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 public partial class User_view_cart : System.Web.UI.Page
 {
     string s;
+    int tot = 0;
     string t;
     string[] a = new string[6];
     protected void Page_Load(object sender, EventArgs e)
@@ -31,6 +32,8 @@ public partial class User_view_cart : System.Web.UI.Page
                     a[j] = strArr1[j].ToString();
                 }
 
+                tot = tot + (Convert.ToInt32(a[2].ToString()) * Convert.ToInt32(a[3].ToString()));
+
                 try
                 {
 
@@ -47,8 +50,16 @@ public partial class User_view_cart : System.Web.UI.Page
         }
         d1.DataSource = dt;
         d1.DataBind();
+        l1.Text = "you have to Pay :- " + tot.ToString();
 
+          
     }
 
-    
+
+
+    protected void b1_Click(object sender, EventArgs e)
+    {
+        Session["checkoutbutton"] = "yes";
+       Response.Redirect("checkout.aspx");
+    }
 }

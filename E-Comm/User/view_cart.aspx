@@ -5,7 +5,16 @@
 
                  <asp:DataList ID="d1" runat="server">
                      <HeaderTemplate>
-                         <table>
+                         <table border="1">
+                             <tr style="background-color:silver; color:white; font-weight:bold">
+                                 <td> PRODUCT NAME</td>
+                                  <td> PRODUCT NAME</td>
+                                  <td> PRODUCT DESCRIPTION</td>
+                                  <td> PRODUCT PRICE</td>
+                                  <td> PRODUCT QUANTITY</td>
+                                  <td> DELETE</td>
+
+                                 </tr>
                              </HeaderTemplate>
 
                      <ItemTemplate>
@@ -22,7 +31,13 @@
                          </table>
                          </FooterTemplate>
                      </asp:DataList>
-                 
+                  <br />
+
+                 <p align="center">
+
+                       <asp:Label ID="l1" runat="server"> </asp:Label> <br />
+                     <asp:Button  ID="b1" runat="server" Text="checkout" OnClick="b1_Click" />
+                     </p>
     
                  </div>
              </asp:Content>
